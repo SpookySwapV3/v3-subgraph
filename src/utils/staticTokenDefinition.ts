@@ -2,6 +2,7 @@ import {
   Address,
   BigInt,
 } from "@graphprotocol/graph-ts"
+import { STATIC_TOKENS } from "./configurations"
   
 // Initialize a Token Definition with the attributes
 export class StaticTokenDefinition {
@@ -20,29 +21,7 @@ export class StaticTokenDefinition {
 
   // Get all tokens with a static defintion
   static getStaticDefinitions(): Array<StaticTokenDefinition> {
-
-    // Add DGD
-    return [
-      new StaticTokenDefinition(
-        Address.fromString('0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C'),
-        'WBTT',
-        'Wrapped Bittorrent',
-        BigInt.fromI32(18)
-      ),
-      new StaticTokenDefinition(
-        Address.fromString('0xAE17940943BA9440540940DB0F1877f101D39e8b'),
-        'USDC_e',
-        'USD Coin (ETH)',
-        BigInt.fromI32(6)
-      ),
-      new StaticTokenDefinition(
-        Address.fromString('0x9888221fE6B5A2ad4cE7266c7826D2AD74D40CcF'),
-        'WBTC',
-        'Wrapped Bitcoin',
-        BigInt.fromI32(8)
-      )
-  
-    ]
+      return STATIC_TOKENS
   }
 
   // Helper for hardcoded tokens
@@ -62,4 +41,4 @@ export class StaticTokenDefinition {
     return null
   }
 
-}
+} 
