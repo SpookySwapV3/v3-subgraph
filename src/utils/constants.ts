@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import { BigInt, BigDecimal, Address } from '@graphprotocol/graph-ts'
 import { Factory as FactoryContract } from '../types/templates/Pool/Factory'
-import { FACTORY_ADDRESS } from './configurations'
+import { FACTORY_ADDRESS } from './deployment-config'
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
 

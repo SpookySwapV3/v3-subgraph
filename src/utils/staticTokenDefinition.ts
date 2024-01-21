@@ -2,7 +2,7 @@ import {
   Address,
   BigInt,
 } from "@graphprotocol/graph-ts"
-import { STATIC_TOKENS } from "./configurations"
+import { STATIC_TOKENS } from "./deployment-config"
   
 // Initialize a Token Definition with the attributes
 export class StaticTokenDefinition {

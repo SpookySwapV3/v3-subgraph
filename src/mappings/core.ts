@@ -21,7 +21,7 @@ import {
   updateUniswapDayData
 } from '../utils/intervalUpdates'
 import { createTick, feeTierToTickSpacing } from '../utils/tick'
-import { FACTORY_ADDRESS } from '../utils/configurations'
+import { FACTORY_ADDRESS } from '../utils/deployment-config'
 
 export function handleInitialize(event: Initialize): void {
   // update pool sqrt price and tick

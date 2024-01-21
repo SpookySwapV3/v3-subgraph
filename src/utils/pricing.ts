@@ -3,7 +3,7 @@ import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 import { Bundle, Pool, Token } from './../types/schema'
 import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
-import { MINIMUM_ETH_LOCKED, PRIMARY_STABLE_WNATIVE_POOL, STABLE_COINS, WHITELIST_TOKENS, WNATIVE_ADDRESS } from './configurations'
+import { MINIMUM_ETH_LOCKED, PRIMARY_STABLE_WNATIVE_POOL, STABLE_COINS, WHITELIST_TOKENS, WNATIVE_ADDRESS } from './deployment-config'
 
 let Q192 = 2 ** 192
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
