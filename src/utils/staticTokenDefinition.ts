@@ -2,6 +2,7 @@ import {
   Address,
   BigInt,
 } from "@graphprotocol/graph-ts"
+import { WNATIVE_ADDRESS } from "./pricing"
   
 // Initialize a Token Definition with the attributes
 export class StaticTokenDefinition {
@@ -24,21 +25,21 @@ export class StaticTokenDefinition {
     // Add DGD
     return [
       new StaticTokenDefinition(
-        Address.fromString('0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C'),
-        'WBTT',
+        Address.fromString(WNATIVE_ADDRESS),
+        'WFTM',
         'Wrapped Bittorrent',
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0xAE17940943BA9440540940DB0F1877f101D39e8b'),
-        'USDC_e',
-        'USD Coin (ETH)',
+        Address.fromString('0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf'),
+        'USDC_LZ',
+        'USD Coin (Layer Zero)',
         BigInt.fromI32(6)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x9888221fE6B5A2ad4cE7266c7826D2AD74D40CcF'),
-        'WBTC',
-        'Wrapped Bitcoin',
+        Address.fromString('0x1B6382DBDEa11d97f24495C9A90b7c88469134a4'),
+        'USDC_AXL',
+        'USD Coin (Axelar)',
         BigInt.fromI32(8)
       )
   
