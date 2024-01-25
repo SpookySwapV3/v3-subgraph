@@ -27,7 +27,7 @@ export class StaticTokenDefinition {
       new StaticTokenDefinition(
         Address.fromString(WNATIVE_ADDRESS),
         'WFTM',
-        'Wrapped Bittorrent',
+        'Wrapped Fantom',
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
