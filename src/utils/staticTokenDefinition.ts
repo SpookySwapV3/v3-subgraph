@@ -31,13 +31,13 @@ export class StaticTokenDefinition {
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x28a92dde19D9989F39A49905d7C9C2FAc7799bDf'),
+        Address.fromString('0x28a92dde19d9989f39a49905d7c9c2fac7799bdf'),
         'USDC_LZ',
         'USD Coin (Layer Zero)',
         BigInt.fromI32(6)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x1B6382DBDEa11d97f24495C9A90b7c88469134a4'),
+        Address.fromString('0x1b6382dbdea11d97f24495c9a90b7c88469134a4'),
         'USDC_AXL',
         'USD Coin (Axelar)',
         BigInt.fromI32(8)
