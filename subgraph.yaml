@@ -5,6 +5,7 @@ schema:
   file: ./schema.graphql
 features:
   - nonFatalErrors
+  - grafting
 dataSources:
   - kind: ethereum/contract
     name: Factory
@@ -15,7 +16,7 @@ dataSources:
       startBlock: 70992836
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.7
       language: wasm/assemblyscript
       file: ./src/mappings/factory.ts
       entities:
@@ -38,7 +39,7 @@ dataSources:
   - kind: ethereum/contract
     name: NonfungiblePositionManager
     network: mainnet
-    source:
+    source:SpookySwapV3/v3-subgraph
       address: '0xb39d21718e24DE36fDD8c5C73e928B5EFF33d6C2'
       abi: NonfungiblePositionManager
       startBlock: 70992943
@@ -76,9 +77,9 @@ templates:
       abi: Pool
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.7
       language: wasm/assemblyscript
-      file: ./src/mappings/core.ts
+      file: ./src/mappings/pool/index.ts
       entities:
         - Pool
         - Token
@@ -98,5 +99,5 @@ templates:
           handler: handleMint
         - event: Burn(indexed address,indexed int24,indexed int24,uint128,uint256,uint256)
           handler: handleBurn
-        - event: Flash(indexed address,indexed address,uint256,uint256,uint256,uint256)
-          handler: handleFlash
+        - event: Collect(indexed address,address,indexed int24,indexed int24,uint128,uint128)
+          handler: handleCollect
