@@ -6,29 +6,29 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 
 
-export const WNATIVE_ADDRESS = '0xF5cB8652a84329A2016A386206761f455bCEDab6'
-const PRIMARY_STABLE_WNATIVE_POOL = '0x76b59E4b1145C692ADe271EdB4F67D813A5568e4' // USDC_LZ_WZEN_03_POOL
+export const WNATIVE_ADDRESS = '0xf5cb8652a84329a2016a386206761f455bcedab6'
+const PRIMARY_STABLE_WNATIVE_POOL = '0x76b59e4b1145c692ade271edb4f67d813a5568e4' // USDC_LZ_WZEN_03_POOL
 
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export let WHITELIST_TOKENS: string[] = [
   WNATIVE_ADDRESS, // WETH
-  '0x1d7fb99AED3C365B4DEf061B7978CE5055Dfc1e7', // lzWBTC
-  '0x2c2E0B0c643aB9ad03adBe9140627A645E99E054', // lzETH
-  '0xDF8DBA35962Aa0fAD7ade0Df07501c54Ec7c4A89', // lzLINK
-  '0x6318374DFb468113E06d3463ec5Ed0B6Ae0F0982' // lzAVAX
+  '0x1d7fb99aed3c365b4def061b7978ce5055dfc1e7', // lzWBTC
+  '0x2c2e0b0c643ab9ad03adbe9140627a645e99e054', // lzETH
+  '0xdf8dba35962aa0fad7ade0df07501c54ec7c4a89', // lzLINK
+  '0x6318374dfb468113e06d3463ec5ed0b6ae0f0982' // lzAVAX
 
 ]
 
 let STABLE_COINS: string[] = [
-  '0x38C2a6953F86a7453622B1E7103b738239728754', // lzDAI
-  '0xCEad8ee30e03aE87E5E709617f7FdF180Eef9973', // ZUSD
-  '0xA167bcAb6791304EDa9B636C8beEC75b3D2829E6', // lzUSDT
-  '0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53' // lzUSDC
+  '0x38c2a6953f86a7453622b1e7103b738239728754', // lzDAI
+  '0xcead8ee30e03ae87e5e709617f7fdf180eef9973', // ZUSD
+  '0xa167bcab6791304eda9b636c8beec75b3d2829e6', // lzUSDT
+  '0xcc44eb064cd32aafeeb2ebb2a47be0b882383b53' // lzUSDC
 ]
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString('100')
 
 let Q192 = 2 ** 192
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {

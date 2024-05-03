@@ -30,49 +30,49 @@ export class StaticTokenDefinition {
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x1d7fb99AED3C365B4DEf061B7978CE5055Dfc1e7'),
+        Address.fromString('0x1d7fb99aed3c365b4def061b7978ce5055dfc1e7'),
         'lzWBTC',
         'LayerZero WBTC',
         BigInt.fromI32(8)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x2c2E0B0c643aB9ad03adBe9140627A645E99E054'),
+        Address.fromString('0x2c2e0b0c643ab9ad03adbe9140627a645e99e054'),
         'lzETH',
         'LayerZero ETH',
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x6318374DFb468113E06d3463ec5Ed0B6Ae0F0982'),
+        Address.fromString('0x6318374dfb468113e06d3463ec5ed0b6ae0f0982'),
         'lzAVAX',
         'LayerZero AVAX',
         BigInt.fromI32(6)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0xDF8DBA35962Aa0fAD7ade0Df07501c54Ec7c4A89'),
+        Address.fromString('0xdf8dba35962aa0fad7ade0df07501c54ec7c4a89'),
         'lzLINK',
         'LayerZero LINK',
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x38C2a6953F86a7453622B1E7103b738239728754'),
+        Address.fromString('0x38c2a6953f86a7453622b1e7103b738239728754'),
         'lzDAI',
         'LayerZero DAI',
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0xCc44eB064CD32AAfEEb2ebb2a47bE0B882383b53'),
+        Address.fromString('0xcc44eb064cd32aafeeb2ebb2a47be0b882383b53'),
         'lzUSDC',
         'LayerZero USDC',
         BigInt.fromI32(6)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0xA167bcAb6791304EDa9B636C8beEC75b3D2829E6'),
+        Address.fromString('0xa167bcab6791304eda9b636c8beec75b3d2829e6'),
         'lzUSDT',
         'LayerZero USDT',
         BigInt.fromI32(6)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0xCEad8ee30e03aE87E5E709617f7FdF180Eef9973'),
+        Address.fromString('0xcead8ee30e03ae87e5e709617f7fdf180eef9973'),
         'ZUSD',
         'ZEN USD',
         BigInt.fromI32(6)
