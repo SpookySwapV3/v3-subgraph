@@ -24,19 +24,19 @@ export class StaticTokenDefinition {
     // Add DGD
     return [
       new StaticTokenDefinition(
-        Address.fromString('0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C'),
+        Address.fromString('0x23181f21dea5936e24163ffaba4ea3b316b57f3c'),
         'WBTT',
         'Wrapped Bittorrent',
         BigInt.fromI32(18)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0xAE17940943BA9440540940DB0F1877f101D39e8b'),
+        Address.fromString('0xae17940943ba9440540940db0f1877f101d39e8b'),
         'USDC_e',
         'USD Coin (ETH)',
         BigInt.fromI32(6)
       ),
       new StaticTokenDefinition(
-        Address.fromString('0x9888221fE6B5A2ad4cE7266c7826D2AD74D40CcF'),
+        Address.fromString('0x9888221fe6b5a2ad4ce7266c7826d2ad74d40ccf'),
         'WBTC',
         'Wrapped Bitcoin',
         BigInt.fromI32(8)
