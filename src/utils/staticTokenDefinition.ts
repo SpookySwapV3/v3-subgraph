@@ -1,5 +1,9 @@
-import { Address, BigInt } from '@graphprotocol/graph-ts'
-
+import {
+  Address,
+  BigInt,
+} from "@graphprotocol/graph-ts"
+import { WNATIVE_ADDRESS } from "./pricing"
+  
 // Initialize a Token Definition with the attributes
 export class StaticTokenDefinition {
   address: Address
@@ -11,40 +15,58 @@ export class StaticTokenDefinition {
   static getStaticDefinitions(): Array<StaticTokenDefinition> {
     const staticDefinitions: Array<StaticTokenDefinition> = [
       {
-        address: Address.fromString('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a'),
-        symbol: 'DGD',
-        name: 'DGD',
-        decimals: BigInt.fromI32(9),
-      },
-      {
-        address: Address.fromString('0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9'),
-        symbol: 'AAVE',
-        name: 'Aave Token',
+        address: Address.fromString(WNATIVE_ADDRESS),
+        symbol: 'WZEN',
+        name: 'Wrapped Zen',
         decimals: BigInt.fromI32(18),
       },
       {
-        address: Address.fromString('0xeb9951021698b42e4399f9cbb6267aa35f82d59d'),
-        symbol: 'LIF',
-        name: 'Lif',
+        address: Address.fromString('0x1d7fb99aed3c365b4def061b7978ce5055dfc1e7'),
+        symbol: 'lzWBTC',
+        name: 'LayerZero WBTC',
+        decimals: BigInt.fromI32(8),
+      },
+      {
+        address: Address.fromString('0x2c2e0b0c643ab9ad03adbe9140627a645e99e054'),
+        symbol: 'lzETH',
+        name: 'LayerZero ETH',
         decimals: BigInt.fromI32(18),
       },
       {
-        address: Address.fromString('0xbdeb4b83251fb146687fa19d1c660f99411eefe3'),
-        symbol: 'SVD',
-        name: 'savedroid',
+        address: Address.fromString('0x6318374dfb468113e06d3463ec5ed0b6ae0f0982'),
+        symbol: 'lzAVAX',
+        name: 'LayerZero AVAX',
         decimals: BigInt.fromI32(18),
       },
       {
-        address: Address.fromString('0xbb9bc244d798123fde783fcc1c72d3bb8c189413'),
-        symbol: 'TheDAO',
-        name: 'TheDAO',
-        decimals: BigInt.fromI32(16),
+        address: Address.fromString('0xdf8dba35962aa0fad7ade0df07501c54ec7c4a89'),
+        symbol: 'lzLINK',
+        name: 'LayerZero LINK',
+        decimals: BigInt.fromI32(18),
       },
       {
-        address: Address.fromString('0x38c6a68304cdefb9bec48bbfaaba5c5b47818bb2'),
-        symbol: 'HPB',
-        name: 'HPBCoin',
+        address: Address.fromString('0x38c2a6953f86a7453622b1e7103b738239728754'),
+        symbol: 'lzDAI',
+        name: 'LayerZero DAI',
         decimals: BigInt.fromI32(18),
+      },
+      {
+        address: Address.fromString('0xcc44eb064cd32aafeeb2ebb2a47be0b882383b53'),
+        symbol: 'lzUSDC',
+        name: 'LayerZero USDC',
+        decimals: BigInt.fromI32(6),
+      },
+      {
+        address: Address.fromString('0xa167bcab6791304eda9b636c8beec75b3d2829e6'),
+        symbol: 'lzUSDT',
+        name: 'LayerZero USDT',
+        decimals: BigInt.fromI32(18),
+      },
+      {
+        address: Address.fromString('0xcead8ee30e03ae87e5e709617f7fdf180eef9973'),
+        symbol: 'ZUSD',
+        name: 'ZEN USD',
+        decimals: BigInt.fromI32(6),
       },
     ]
     return staticDefinitions
