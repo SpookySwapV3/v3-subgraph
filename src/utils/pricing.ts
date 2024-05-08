@@ -5,7 +5,7 @@ import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 const WNATIVE_ADDRESS = '0x23181f21dea5936e24163ffaba4ea3b316b57f3c'
-const PRIMARY_STABLE_WNATIVE_POOL = '0x1d163f8aba2a8c8ccbfebea30b93473d7b234e0f' // USDT_T WBTT 03
+const PRIMARY_STABLE_WNATIVE_POOL = '0x418afcd6d15fa51d59d6c7f7a5943eb04d5f21f0' // USDT_T WBTT 03
 
 
 // token where amounts should contribute to tracked volume and liquidity
@@ -50,9 +50,9 @@ export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, t
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
-  let usdcPool = Pool.load(PRIMARY_STABLE_WNATIVE_POOL) // usdt is token0
+  let usdcPool = Pool.load(PRIMARY_STABLE_WNATIVE_POOL) // usdt is token1
   if (usdcPool !== null) {
-    return usdcPool.token0Price
+    return usdcPool.token1Price
   } else {
     return ZERO_BD
   }
