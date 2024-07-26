@@ -27,7 +27,7 @@ let STABLE_COINS: string[] = [
   '0x2F733095B80A04b38b0D10cC884524a3d09b836a', // new fantom stable
 ]
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2000')
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString('6000')
 
 const Q192 = BigInt.fromI32(2).pow(192 as u8)
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {

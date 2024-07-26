@@ -9,7 +9,7 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: fantom
     source:
       address: '0x7928a2c48754501f3a8064765ECaE541daE5c3E6'
       abi: Factory
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: mainnet
+    network: fantom
     source:
       abi: Pool
     mapping:
