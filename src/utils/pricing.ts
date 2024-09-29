@@ -4,8 +4,8 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
-const WNATIVE_ADDRESS = '0x7507c1dc16935b82698e4c63f2746a2fcf994df8'
-const PRIMARY_STABLE_WNATIVE_POOL = '0x0620768b4005E443e008B1A7F5E957963D4E5bF9' // mUSDC_wBera_03
+const WNATIVE_ADDRESS = '0xd31686e65f17542c7019b22b2e6a0c71e72aa8dd'
+const PRIMARY_STABLE_WNATIVE_POOL = '0xe24f790a2a21f965a5af82551556834fefda484a' // usdc(coral)_wSonic_03
 
 
 // token where amounts should contribute to tracked volume and liquidity
@@ -15,7 +15,7 @@ export let WHITELIST_TOKENS: string[] = [
 ]
 
 let STABLE_COINS: string[] = [
-  '0x153a59e72bcfaf9bdb8d3864945d44595856a970', // mUsdc  mock usdc
+  '0xaf93888cbd250300470a1618206e036e11470149', // mUsdc  mock usdc
 ]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('1')
