@@ -4,20 +4,21 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
-const WNATIVE_ADDRESS = '0xee4bc42157cf65291ba2fe839ae127e3cc76f741'
-const PRIMARY_STABLE_WNATIVE_POOL = '0x14b58774c83a3e43a32e5a25ff8ad4fef467fea0' // USDT_T WBTT 03
+
+const WNATIVE_ADDRESS = '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38'
+const PRIMARY_STABLE_WNATIVE_POOL = '0x480a36338fdba6d2e06d1d6f48f9196932fbe30e' // usdc(coral)_wSonic_03
+
 
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export let WHITELIST_TOKENS: string[] = [
   WNATIVE_ADDRESS, // WETH
-  '0x37375d3a50e9b9938f62f0bf5f021d7aa5444706', 
-  '0x1f57a12f7cd58a50579efac218d517082c27452a', 
+  '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // mUsdc  mock usdc
 ]
 
 let STABLE_COINS: string[] = [
-  '0x37375d3a50e9b9938f62f0bf5f021d7aa5444706', // usdd_t
+  '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // mUsdc  mock usdc
 ]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.001')
@@ -37,9 +38,9 @@ export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, t
 
 export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
-  let usdcPool = Pool.load(PRIMARY_STABLE_WNATIVE_POOL) // usdt is token0
+  let usdcPool = Pool.load(PRIMARY_STABLE_WNATIVE_POOL) // usdc is token1
   if (usdcPool !== null) {
-    return usdcPool.token0Price
+    return usdcPool.token1Price //usdc
   } else {
     return ZERO_BD
   }

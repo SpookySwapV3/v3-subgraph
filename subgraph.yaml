@@ -8,11 +8,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: goat-testnet
+    network: sonic
     source:
-      address: '0xD31686E65f17542C7019B22b2E6A0C71e72aA8Dd'
+      address: '0x3D91B700252e0E3eE7805d12e048a988Ab69C8ad'
       abi: Factory
-      startBlock: 410060
+      startBlock: 286535
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -37,11 +37,11 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: goat-testnet
+    network: sonic
     source:
-      address: '0xEdF5893bBFa684aB152090cA56C639C73F23e1Bc'
+      address: '0xBAb4A13713C4dfba3073d0b35e2829F8be800310'
       abi: NonfungiblePositionManager
-      startBlock: 410093
+      startBlock: 286553
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -71,7 +71,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: goat-testnet
+    network: sonic
     source:
       abi: Pool
     mapping:
