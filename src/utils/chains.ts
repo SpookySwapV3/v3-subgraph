@@ -69,25 +69,25 @@ export function getSubgraphConfig(): SubgraphConfig {
   // subgraph does not support case switch with strings, hence this if else block
   if (selectedNetwork == SONIC_TEST_NETWORK_NAME) {
     return {
-      factoryAddress: '0x7928a2c48754501f3a8064765ecae541dae5c3e6',
-      stablecoinWrappedNativePoolAddress: '0x3e3dd517fec2e70eddba2a626422a4ba286e8c38', // USDC.e/WETH 0.05% pool
-      stablecoinIsToken0: true,
-      wrappedNativeAddress: '0xd31686e65f17542c7019b22b2e6a0c71e72aa8dd', // WETH
-      minimumNativeLocked: BigDecimal.fromString('1'),
+      factoryAddress: '0x3d91b700252e0e3ee7805d12e048a988ab69c8ad',
+      stablecoinWrappedNativePoolAddress: '0x480a36338fdba6d2e06d1d6f48f9196932fbe30e', // USDC.e/WETH 0.05% pool
+      stablecoinIsToken0: false,
+      wrappedNativeAddress: '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38', // WETH
+      minimumNativeLocked: BigDecimal.fromString('0.001'),
       stablecoinAddresses: [
-        '0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4', // USDC.e
+        '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // USDC.e
       ],
       whitelistTokens: [
-        '0xd31686e65f17542c7019b22b2e6a0c71e72aa8dd', // WETH
-        '0xaf93888cbd250300470a1618206e036e11470149', // USDC.e
+        '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38', // WETH
+        '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // USDC.e
       ],
       tokenOverrides: [
-        {
-          address: Address.fromString('0xaf93888cbd250300470a1618206e036e11470149'),
-          symbol: 'CORAL',
-          name: 'Coral',
-          decimals: BigInt.fromI32(18),
-        },
+        // {
+        //   address: Address.fromString('0xaf93888cbd250300470a1618206e036e11470149'),
+        //   symbol: 'CORAL',
+        //   name: 'Coral',
+        //   decimals: BigInt.fromI32(18),
+        // },
       ],
       poolsToSkip: [],
       poolMappings: [],
