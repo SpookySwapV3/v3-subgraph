@@ -6,7 +6,7 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
 
 const WNATIVE_ADDRESS = '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38'
-const PRIMARY_STABLE_WNATIVE_POOL = '0x480a36338fdba6d2e06d1d6f48f9196932fbe30e' // usdc(coral)_wSonic_03
+const PRIMARY_STABLE_WNATIVE_POOL = '0x216a86c8716fad79e05d23b1622ca432a739582a' // usdc(coral)_wSonic_03
 
 
 
@@ -14,14 +14,14 @@ const PRIMARY_STABLE_WNATIVE_POOL = '0x480a36338fdba6d2e06d1d6f48f9196932fbe30e'
 // usually tokens that many tokens are paired with s
 export let WHITELIST_TOKENS: string[] = [
   WNATIVE_ADDRESS, // WETH
-  '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // mUsdc  mock usdc
+  '0x29219dd400f2Bf60E5a23d13Be72B486D4038894', // mUsdc  mock usdc
 ]
 
 let STABLE_COINS: string[] = [
-  '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // mUsdc  mock usdc
+  '0x29219dd400f2Bf60E5a23d13Be72B486D4038894', // mUsdc  mock usdc
 ]
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.001')
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString('2000')
 
 let Q192 = 2 ** 192
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
