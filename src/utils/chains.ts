@@ -70,16 +70,16 @@ export function getSubgraphConfig(): SubgraphConfig {
   if (selectedNetwork == SONIC_TEST_NETWORK_NAME) {
     return {
       factoryAddress: '0x3d91b700252e0e3ee7805d12e048a988ab69c8ad',
-      stablecoinWrappedNativePoolAddress: '0x480a36338fdba6d2e06d1d6f48f9196932fbe30e', // USDC.e/WETH 0.05% pool
+      stablecoinWrappedNativePoolAddress: '0x216a86c8716fad79e05d23b1622ca432a739582a', // USDC.e/WETH 0.05% pool
       stablecoinIsToken0: false,
       wrappedNativeAddress: '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38', // WETH
-      minimumNativeLocked: BigDecimal.fromString('0.001'),
+      minimumNativeLocked: BigDecimal.fromString('2000'),
       stablecoinAddresses: [
-        '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // USDC.e
+        '0x29219dd400f2bf60e5a23d13be72b486d4038894', // USDC.e
       ],
       whitelistTokens: [
         '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38', // WETH
-        '0xcc96a349d1627ccc07628cadbee7ab7e3031020e', // USDC.e
+        '0x29219dd400f2bf60e5a23d13be72b486d4038894', // USDC.e
       ],
       tokenOverrides: [
         // {
