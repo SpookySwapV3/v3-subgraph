@@ -4,22 +4,22 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
-export const WETH_ADDRESS = '0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38'
-export const USDC_WETH_03_POOL = '0x216a86c8716fad79e05d23b1622ca432a739582a'
-export const STABLECOIN_IS_TOKEN0 = false
+export const WETH_ADDRESS = '0xbC10000000000000000000000000000000000000'
+export const USDC_WETH_03_POOL = '0xce75a44423b9cD86C8d33d94079CD31738255c3D'
+export const STABLECOIN_IS_TOKEN0 = true
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0x29219dd400f2bf60e5a23d13be72b486d4038894', // USDC
+  '0x5C5Dc36c98d151D5410eEfc16DBB096F7F99523B', // USDC
 ]
 
 export const STABLE_COINS: string[] = [
-  '0x29219dd400f2bf60e5a23d13be72b486d4038894',
+  '0x5C5Dc36c98d151D5410eEfc16DBB096F7F99523B',
 ]
 
-export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('2000')
+export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.000001')
 
 const Q192 = BigInt.fromI32(2).pow(192 as u8)
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {

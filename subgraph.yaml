@@ -9,11 +9,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: sonic
+    network: goat
     source:
-      address: '0x3D91B700252e0E3eE7805d12e048a988Ab69C8ad'
+      address: '0x3D9c7F529005017aFD0a7fc2CF97D0baF72C5418'
       abi: Factory
-      startBlock: 286535
+      startBlock: 108410
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: sonic
+    network: goat
     source:
       abi: Pool
     mapping:
