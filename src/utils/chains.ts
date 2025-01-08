@@ -67,7 +67,6 @@ export function getSubgraphConfig(): SubgraphConfig {
   const selectedNetwork = dataSource.network()
 
   // subgraph does not support case switch with strings, hence this if else block
-  if (selectedNetwork == SONIC_TEST_NETWORK_NAME) {
     return {
       factoryAddress: '0x3D9c7F529005017aFD0a7fc2CF97D0baF72C5418',
       stablecoinWrappedNativePoolAddress: '0xce75a44423b9cD86C8d33d94079CD31738255c3D', // USDC.e/WETH 0.05% pool
@@ -92,7 +91,4 @@ export function getSubgraphConfig(): SubgraphConfig {
       poolsToSkip: [],
       poolMappings: [],
     }
-  } else {
-    throw new Error('Unsupported Network')
-  }
 }
