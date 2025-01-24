@@ -13,8 +13,7 @@ const PRIMARY_STABLE_WNATIVE_POOL = '0xf6021f2f63ab3bcdddbaf32939cd66a8b9e4c21c'
 // TODO ADD ONLY A FEW MORE TOKENS SUCH AS CANON STABLECOIN
 export let WHITELIST_TOKENS: string[] = [
   WNATIVE_ADDRESS, // WETH
-  '0x2F733095B80A04b38b0D10cC884524a3d09b836a',
-  '0x28a92dde19d9989f39a49905d7c9c2fac7799bdf', // USDC_LZ
+  // '0x28a92dde19d9989f39a49905d7c9c2fac7799bdf', // USDC_LZ
   '0x1b6382dbdea11d97f24495c9a90b7c88469134a4', // USDC_AXL
   '0x2F733095B80A04b38b0D10cC884524a3d09b836a', // new fantom stable
 ]
@@ -27,7 +26,7 @@ let STABLE_COINS: string[] = [
   '0x2F733095B80A04b38b0D10cC884524a3d09b836a', // new fantom stable
 ]
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString('6000')
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString('25000')
 
 const Q192 = BigInt.fromI32(2).pow(192 as u8)
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
