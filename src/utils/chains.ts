@@ -69,24 +69,27 @@ export function getSubgraphConfig(): SubgraphConfig {
   // subgraph does not support case switch with strings, hence this if else block
     return {
       factoryAddress: '0x3d9c7f529005017afd0a7fc2cf97d0baf72c5418',
-      stablecoinWrappedNativePoolAddress: '0xce75a44423b9cd86c8d33d94079cd31738255c3d', // USDC.e/WETH 0.05% pool
-      stablecoinIsToken0: true,
+      stablecoinWrappedNativePoolAddress: '0x2c8d4d8ef3112fd19de32a2853eb1fb36436e5b4', 
+      stablecoinIsToken0: false,
       wrappedNativeAddress: '0xbc10000000000000000000000000000000000000', // WETH
       minimumNativeLocked: BigDecimal.fromString('0.000001'),
       stablecoinAddresses: [
-        '0x5c5dc36c98d151d5410eefc16dbb096f7f99523b', // USDC.e
+        '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
+        '0xe1ad845d93853fff44990ae0dcecd8575293681e'
       ],
       whitelistTokens: [
-        '0xbc10000000000000000000000000000000000000', // WETH
-        '0x5c5dc36c98d151d5410eefc16dbb096f7f99523b', // USDC.e
+        '0xbc10000000000000000000000000000000000000', // wbtc
+        '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
+        '0xe1ad845d93853fff44990ae0dcecd8575293681e',
+        '0x3a1293bdb83bbbdd5ebf4fac96605ad2021bbc0f' //weth
       ],
       tokenOverrides: [
-        // {
-        //   address: Address.fromString('0xaf93888cbd250300470a1618206e036e11470149'),
-        //   symbol: 'CORAL',
-        //   name: 'Coral',
-        //   decimals: BigInt.fromI32(18),
-        // },
+        {
+          address: Address.fromString('0xe1ad845d93853fff44990ae0dcecd8575293681e'),
+          symbol: 'USDT',
+          name: 'USD Tether (LZ)',
+          decimals: BigInt.fromI32(6),
+        },
       ],
       poolsToSkip: [],
       poolMappings: [],

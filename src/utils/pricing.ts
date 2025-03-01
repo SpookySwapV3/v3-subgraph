@@ -5,18 +5,21 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
 export const WETH_ADDRESS = '0xbc10000000000000000000000000000000000000'
-export const USDC_WETH_03_POOL = '0xce75a44423b9cd86c8d33d94079cd31738255c3d'
-export const STABLECOIN_IS_TOKEN0 = true
+export const USDC_WETH_03_POOL = '0x2c8d4d8ef3112fd19de32a2853eb1fb36436e5b4'
+export const STABLECOIN_IS_TOKEN0 = false
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-  '0x5c5dc36c98d151d5410eefc16dbb096f7f99523b', // USDC
+        '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
+        '0xe1ad845d93853fff44990ae0dcecd8575293681e',
+        '0x3a1293bdb83bbbdd5ebf4fac96605ad2021bbc0f' //weth
 ]
 
 export const STABLE_COINS: string[] = [
-  '0x5c5dc36c98d151d5410eefc16dbb096f7f99523b',
+        '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
+        '0xe1ad845d93853fff44990ae0dcecd8575293681e',
 ]
 
 export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.000001')
