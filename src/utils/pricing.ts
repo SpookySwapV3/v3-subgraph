@@ -14,7 +14,8 @@ export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
         '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
         '0xe1ad845d93853fff44990ae0dcecd8575293681e',
-        '0x3a1293bdb83bbbdd5ebf4fac96605ad2021bbc0f' //weth
+        '0x3a1293bdb83bbbdd5ebf4fac96605ad2021bbc0f', //weth
+        '0xfe41e7e5cb3460c483ab2a38eb605cda9e2d248e' //btcb
 ]
 
 export const STABLE_COINS: string[] = [
@@ -22,7 +23,7 @@ export const STABLE_COINS: string[] = [
         '0xe1ad845d93853fff44990ae0dcecd8575293681e',
 ]
 
-export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.000001')
+export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.00001')
 
 const Q192 = BigInt.fromI32(2).pow(192 as u8)
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {

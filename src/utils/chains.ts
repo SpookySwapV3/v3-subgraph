@@ -72,7 +72,7 @@ export function getSubgraphConfig(): SubgraphConfig {
       stablecoinWrappedNativePoolAddress: '0x2c8d4d8ef3112fd19de32a2853eb1fb36436e5b4', 
       stablecoinIsToken0: false,
       wrappedNativeAddress: '0xbc10000000000000000000000000000000000000', // WETH
-      minimumNativeLocked: BigDecimal.fromString('0.000001'),
+      minimumNativeLocked: BigDecimal.fromString('0.00001'),
       stablecoinAddresses: [
         '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
         '0xe1ad845d93853fff44990ae0dcecd8575293681e'
@@ -81,7 +81,8 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xbc10000000000000000000000000000000000000', // wbtc
         '0x3022b87ac063de95b1570f46f5e470f8b53112d8', // USDC.e
         '0xe1ad845d93853fff44990ae0dcecd8575293681e',
-        '0x3a1293bdb83bbbdd5ebf4fac96605ad2021bbc0f' //weth
+        '0x3a1293bdb83bbbdd5ebf4fac96605ad2021bbc0f', //weth
+        '0xfe41e7e5cb3460c483ab2a38eb605cda9e2d248e' //btcb
       ],
       tokenOverrides: [
         {
@@ -90,8 +91,20 @@ export function getSubgraphConfig(): SubgraphConfig {
           name: 'USD Tether (LZ)',
           decimals: BigInt.fromI32(6),
         },
+        {
+          address: Address.fromString('0x3022b87ac063DE95b1570F46f5e470F8B53112D8'),
+          symbol: 'USDC.e',
+          name: 'USD Coin (LZ)',
+          decimals: BigInt.fromI32(6),
+        },
+        {
+          address: Address.fromString('0x3a1293Bdb83bBbDd5Ebf4fAc96605aD2021BbC0f'),
+          symbol: 'WETH',
+          name: 'Wrapped Ether (LZ)',
+          decimals: BigInt.fromI32(18),
+        },
       ],
-      poolsToSkip: [],
+      poolsToSkip: ['0xce75a44423b9cd86c8d33d94079cd31738255c3d'],
       poolMappings: [],
     }
 }
