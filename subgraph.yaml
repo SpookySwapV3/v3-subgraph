@@ -9,7 +9,7 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: arbitrum_one
+    network: arbitrum-one
     source:
       address: '0xA2a7F6B507aE04135B1D8A627CFe4872D8894028'
       abi: Factory
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: arbitrum_one
+    network: arbitrum-one
     source:
       abi: Pool
     mapping:
