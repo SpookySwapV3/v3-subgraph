@@ -9,11 +9,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: goat
+    network: monad-testnet
     source:
       address: '0x3D9c7F529005017aFD0a7fc2CF97D0baF72C5418'
       abi: Factory
-      startBlock: 108410
+      startBlock: 7768398
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: goat
+    network: monad-testnet
     source:
       abi: Pool
     mapping:
