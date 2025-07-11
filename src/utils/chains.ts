@@ -68,21 +68,19 @@ export function getSubgraphConfig(): SubgraphConfig {
 
   // subgraph does not support case switch with strings, hence this if else block
     return {
-      factoryAddress: '0xa2a7f6b507ae04135b1d8a627cfe4872d8894028',
-      stablecoinWrappedNativePoolAddress: '0xe960676a718e8add151ece7ed5b10676dcee607f', 
+      factoryAddress: '0xbaa8353cc9d02733ef12f9556ed999521f6e554c',
+      stablecoinWrappedNativePoolAddress: '0x1888bda067706d1242d4975efd5b5f1b0e25b9f2', 
       stablecoinIsToken0: false,
-      wrappedNativeAddress: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1', // WETH
+      wrappedNativeAddress: '0x4200000000000000000000000000000000000006', // WETH
       minimumNativeLocked: BigDecimal.fromString('0.00001'),
       stablecoinAddresses: [
-        '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8', // USDC.e
-        '0xaf88d065e77c8cc2239327c5edb3a432268e5831'
+        '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDC.e
+        '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913'
       ],
       whitelistTokens: [
-        '0xa2a7f6b507ae04135b1d8a627cfe4872d8894028', // wbtc
-        '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8', // USDC.e
-        '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
-        '0x82af49447d8a07e3bd95bd0d56f35241523fbab1', //weth
-        // '0xfe41e7e5cb3460c483ab2a38eb605cda9e2d248e' //btcb
+        '0x4200000000000000000000000000000000000006', // weth
+        '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDC.e
+        '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913'
       ],
       tokenOverrides: [
         // {

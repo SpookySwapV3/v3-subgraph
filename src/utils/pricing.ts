@@ -4,23 +4,22 @@ import { exponentToBigDecimal, safeDiv } from '../utils/index'
 import { Bundle, Pool, Token } from './../types/schema'
 import { ONE_BD, ZERO_BD, ZERO_BI } from './constants'
 
-export const WETH_ADDRESS = '0x82af49447d8a07e3bd95bd0d56f35241523fbab1'
-export const USDC_WETH_03_POOL = '0xe960676a718e8add151ece7ed5b10676dcee607f'
+export const WETH_ADDRESS = '0x4200000000000000000000000000000000000006'
+export const USDC_WETH_03_POOL = '0x1888bda067706d1242d4975efd5b5f1b0e25b9f2'
 export const STABLECOIN_IS_TOKEN0 = false
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 export const WHITELIST_TOKENS: string[] = [
   WETH_ADDRESS, // WETH
-        '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8', // USDC.e
-        '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
-        '0x82af49447d8a07e3bd95bd0d56f35241523fbab1', //weth
-        // '0xfe41e7e5cb3460c483ab2a38eb605cda9e2d248e' //btcb
+        '0x4200000000000000000000000000000000000006', // weth
+        '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDC.e
+        '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913'
 ]
 
 export const STABLE_COINS: string[] = [
-        '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8', // USDC.e
-        '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
+        '0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca', // USDC.e
+        '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913'
 ]
 
 export const MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.00001')

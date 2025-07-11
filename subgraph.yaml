@@ -9,11 +9,11 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: arbitrum-one
+    network: base
     source:
-      address: '0xA2a7F6B507aE04135B1D8A627CFe4872D8894028'
+      address: '0xbaA8353CC9d02733eF12f9556ed999521f6E554c'
       abi: Factory
-      startBlock: 108410
+      startBlock: 30005167
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -39,7 +39,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: arbitrum-one
+    network: base
     source:
       abi: Pool
     mapping:
