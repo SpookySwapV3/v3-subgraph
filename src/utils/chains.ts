@@ -78,7 +78,6 @@ export function getSubgraphConfig(): SubgraphConfig {
         '0xaf88d065e77c8cc2239327c5edb3a432268e5831'
       ],
       whitelistTokens: [
-        '0xa2a7f6b507ae04135b1d8a627cfe4872d8894028', // wbtc
         '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8', // USDC.e
         '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
         '0x82af49447d8a07e3bd95bd0d56f35241523fbab1', //weth
