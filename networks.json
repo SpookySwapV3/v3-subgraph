@@ -1,8 +1,8 @@
 {
-  "sonic": {
+  "monad": {
     "Factory": {
-      "address": "0x3D91B700252e0E3eE7805d12e048a988Ab69C8ad",
-      "startBlock": 286535
+      "address": "0x0057CB6fE6a312AC29d60256299F2De425Af734d",
+      "startBlock": 37704657
     }
   }
 }
